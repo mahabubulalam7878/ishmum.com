@@ -1,0 +1,22 @@
+@keyframes imgg{
+  0%{transform: translateY(0);}
+  50%{transform: translateY(-15px);}
+  100%{transform: translateY(-0px);}
+}
+@keyframes slideRight{
+  from{transform: translateX(-500%);}
+}
+@keyframes slideLeft{
+  from{transform: translateX(500%);}
+}
+@keyframes slideTop{
+  from{transform: translateY(-500%);}
+}
+@keyframes slideUp{
+  from{transform: translateY(500%);}
+}
+@keyframes fadeIn{
+  0%{
+      opacity: 0;
+  }
+}
