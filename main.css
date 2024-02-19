@@ -18,6 +18,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   overflow-x: hidden;
+  height: 80vh;
 }
 header {
   position: fixed;
@@ -87,6 +88,7 @@ header h1 {
 }
 section {
   padding: 0 15%;
+  height: 80%;
 }
 .home {
   position: relative;

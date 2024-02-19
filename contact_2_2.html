@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="contact2.css">
+  <title>Contact 2
+  </title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  /* color: #45FF00; */
+}
+.contact_area{
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.7), #212533), url(images/20231011_183737.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+form{
+  width: 90%;
+  max-width: 600px;
+}
+.input_group{
+  margin-bottom: 30px;
+  position: relative;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  outline: 0;
+  border: 1px solid #fff;
+  background: transparent;
+  font-size: 1.1em;
+}
+label{
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #fff;
+  padding: 10px;
+  cursor: text;
+  transition: all 0.2s ease;
+}
+.sbmntbtn{
+  padding: 10px 0;
+  color: #fff;
+  outline: none;
+  background: transparent;
+  border: 1px solid #fff;
+  width: 100%;
+  cursor: pointer;
+}
+/* on click animation */
+input:focus~label,
+input:valid~label,
+textarea:focus~label,
+textarea:valid~label{
+  top: -35px;
+  font-size: 0.8em;
+}
+.same_row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.same_row .input_group {
+  flex-basis: 48%;
+}
+  </style>
+</head>
+<body>
+  
+  <div class="contact_area">
+    <form action="#" method="post">
+      <div class="same_row">
+        <div class="input_group">
+          <input type="text" required id="firstName">
+          <label for="firstName"><i class='bx bxs-user'></i> First Name</label>
+        </div>
+        <div class="input_group">
+          <input type="text" required id="lastName">
+          <label for="lastName"><i class='bx bxs-user'> </i>Last Name</label>
+        </div>
+      </div>
+      
+      <div class="input_group">
+        <input type="email" required id="email">
+        <label for="email"><i class='bx bxs-envelope'></i> Enter E-mail</label>
+      </div>
+      <div class="input_group">
+        <textarea id="message" rows="8" required></textarea>
+        <label for="message"><i class='bx bxs-chat'></i>Your Massage</label>
+      </div>
+      <button type="submit" class="sbmntbtn"><i class='bx bxs-paper-plane'></i>Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>

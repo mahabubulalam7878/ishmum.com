@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+  :root{
+    --bg-color: #1e272e;
+    --animate-color: #ffd32a;
+    --line-color: #ffffff80;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .contact_area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    gap: 30px;
+    background-color: var(--bg-color);
+  }
+
+  .inputbox {
+    position: relative;
+    width: 360px;
+  }
+
+  .inputbox input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--line-color);
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    outline: none;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+  }
+
+  .inputbox span, label {
+    position: absolute;
+    left: 0;
+    padding: 10px 15px;
+    pointer-events: none;
+    font-size: 1.1rem;
+    color: var(--line-color);
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+  }
+
+  .inputbox input:valid~span,
+  .inputbox input:focus~span,
+  textarea:focus~label,
+  textarea:valid~label {
+    /* color: #00fcdb; */
+    color: var(--animate-color);
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.75em;
+    padding: 0 10px;
+    background-color: var(--bg-color);
+    border-left: 2px solid var(--animate-color);
+    border-right: 2px solid var(--animate-color);
+    letter-spacing: 0.2em;
+  }
+  #email,
+  #email:focus,
+  #email:valid{
+    border-width: 2px;
+  }
+  .inputbox input:valid,
+  .inputbox input:focus,
+  textarea:focus,
+  textarea:valid {
+    border: 1px solid var(--animate-color);
+  }
+  /* button area */
+  
+  button{
+    padding: 7px 15px;
+    font-weight: 600;
+    background-color: var(--animate-color);
+    border: 2px outset var(--bg-color) ;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px #898989;
+    cursor: pointer;
+    color: var(--bg-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .15s ease-in-out;
+  }
+  button:hover{
+    background-color: #fff;
+    color: var(--bg-color);
+  }
+  button:active{
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px #898989;
+  }
+  .inputbox, button{
+    margin-bottom: 20px;
+  }
